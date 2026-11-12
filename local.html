@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça Campos do Jordão, SP: dados do lugar e clima.">
+  <title>Campos do Jordão | Meu Lugar</title>
+  <link rel="stylesheet" href="estilos/local.css">
+  <script src="scripts/local.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Campos do Jordão, Brasil</h1>
+  </header>
+
+  <main>
+    <picture>
+      <source media="(min-width: 700px)" srcset="imagens/hero-large.webp" width="1280" height="700">
+      <img src="imagens/hero-small.webp"
+           alt="Paisagem de montanhas e araucárias em Campos do Jordão"
+           width="640" height="400">
+    </picture>
+
+    <section class="dados">
+      <h2>Dados</h2>
+      <ul>
+        <li><strong>Localização:</strong> Serra da Mantiqueira, São Paulo</li>
+        <li><strong>Altitude:</strong> 1.628 m</li>
+        <li><strong>População:</strong> cerca de 52 mil habitantes</li>
+        <li><strong>Área:</strong> 290 km²</li>
+        <li><strong>Idioma:</strong> Português</li>
+        <li><strong>Principal atração:</strong> Festival de Inverno</li>
+      </ul>
+    </section>
+
+    <section class="clima">
+      <h2>Clima</h2>
+      <img class="icone-clima" src="imagens/clima.svg" alt="Ícone de tempo nublado" width="48" height="48">
+      <p><strong>Temperatura:</strong> <span id="temperatura">9</span> °C</p>
+      <p><strong>Condição:</strong> Parcialmente nublado</p>
+      <p><strong>Vento:</strong> <span id="vento">12</span> km/h</p>
+      <p><strong>Sensação térmica:</strong> <span id="sensacao"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> Diego Celestino Souza Ramos | Brasil</p>
+    <p>Última modificação: <span id="ultimaModificacao"></span></p>
+  </footer>
+</body>
+</html>

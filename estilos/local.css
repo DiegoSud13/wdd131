@@ -1,0 +1,80 @@
+:root {
+  --verde: #1f5d3a;
+  --verde-claro: #e6f2ea;
+  --amarelo: #f2c94c;
+  --azul: #1d4e89;
+  --texto: #1b1b1b;
+  --branco: #ffffff;
+  --fonte-titulo: "Georgia", serif;
+  --fonte-texto: "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background: var(--verde-claro);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--verde);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+}
+
+h1, h2 { font-family: var(--fonte-titulo); margin: 0; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.3rem; color: var(--verde); margin-bottom: 0.5rem; }
+
+main img { display: block; width: 100%; height: auto; }
+
+section {
+  background: var(--branco);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 6px solid var(--amarelo);
+}
+
+.dados ul { margin: 0; padding-left: 1.2rem; }
+
+main .icone-clima { width: 48px; height: 48px; margin-bottom: 0.5rem; }
+
+footer {
+  background: var(--azul);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+footer p { margin: 0.2rem 0; }
+
+/* ===== Visualização ampla ===== */
+@media (min-width: 700px) {
+  h1 { font-size: 2.2rem; }
+
+  main { position: relative; }
+
+  main > picture img { height: 560px; object-fit: cover; }
+
+  section {
+    position: absolute;
+    width: 320px;
+    margin: 0;
+    opacity: 0.95;
+  }
+
+  .dados { top: 2rem;    left: 2rem; }
+  .clima { bottom: 2rem; right: 2rem; }
+
+  /* esconde o SVG e usa o emoji via pseudoelemento */
+  main .icone-clima { display: none; }
+
+  .clima h2::after {
+    content: " ⛅";
+  }
+}
