@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo Filtrado | WDD 131 - Diego Celestino Souza Ramos</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Diego Celestino Souza Ramos. Álbum de templos com filtros e carregamento lento de imagens.">
+    <meta name="author" content="Diego Celestino Souza Ramos">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-grandes-filtrados.css" media="(min-width: 700px)">
+    <script src="scripts/dados-templos.js" defer></script>
+    <script src="scripts/templos.js" defer></script>
+    <script src="scripts/templos-filtrados.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <span class="titulo-site">Álbum do Templo</span>
+            <button id="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-nav">☰</button>
+        </div>
+        <nav id="menu-nav">
+            <a href="#" data-filtro="inicio">Página Inicial</a>
+            <a href="#" data-filtro="antigos">Antigos</a>
+            <a href="#" data-filtro="novos">Novos</a>
+            <a href="#" data-filtro="grandes">Grandes</a>
+            <a href="#" data-filtro="pequenos">Pequenos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="titulo-secao">Página Inicial</h1>
+
+        <div class="galeria"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Diego Celestino Souza Ramos. São Paulo, Brasil.</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
