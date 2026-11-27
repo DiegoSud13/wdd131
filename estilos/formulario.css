@@ -1,0 +1,224 @@
+:root {
+    --cor-fundo: #f4f6fb;
+    --cor-principal: #1d3557;
+    --cor-destaque: #e63946;
+    --cor-texto: #1b1b1b;
+    --cor-borda: #8d99ae;
+    --cor-estrela: #f4b400;
+    --cor-estrela-vazia: #b8bfcc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.campo {
+    margin-bottom: 1.4rem;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--cor-principal);
+}
+
+fieldset {
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+}
+
+legend {
+    padding: 0 0.4rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    background: #fff;
+}
+
+select:focus,
+input:focus-visible,
+textarea:focus {
+    outline: 3px solid #457b9d;
+    outline-offset: 1px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Checkboxes */
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.opcao label {
+    margin: 0;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+.opcao input {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* Estrelas */
+.estrelas {
+    display: flex;
+    flex-direction: row-reverse; /* 5 primeiro no HTML, mas 1 aparece primeiro */
+    justify-content: flex-end;
+}
+
+.estrelas input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.estrelas label {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1;
+    padding: 0 0.1rem;
+    cursor: pointer;
+    color: var(--cor-estrela-vazia);
+    transition: color 0.15s;
+}
+
+.estrelas input:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+    color: var(--cor-estrela);
+}
+
+.estrelas input:focus-visible + label {
+    outline: 3px solid #457b9d;
+    border-radius: 4px;
+}
+
+/* Texto só para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Botão */
+input[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #c1121f;
+}
+
+input[type="submit"]:focus-visible {
+    outline: 3px solid #457b9d;
+    outline-offset: 2px;
+}
+
+/* Confirmação */
+.confirmacao {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.confirmacao .contador {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+}
+
+.confirmacao a {
+    color: var(--cor-principal);
+    font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.2rem 1rem;
+    background-color: var(--cor-principal);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    form {
+        padding: 2.2rem;
+    }
+}

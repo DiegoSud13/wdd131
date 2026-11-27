@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de avaliação de produto: conte como foi a sua experiência.">
+    <title>Avaliação de Produto</title>
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação de Produto</h1>
+    </header>
+
+    <main>
+        <form action="avaliacao.html" method="get">
+
+            <!-- Nome do produto -->
+            <div class="campo">
+                <label for="produto">Nome do Produto</label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
+            </div>
+
+            <!-- Data de instalação -->
+            <div class="campo">
+                <label for="dataInstalacao">Data de Instalação</label>
+                <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+            </div>
+
+            <!-- Classificação geral -->
+            <fieldset class="campo">
+                <legend>Classificação Geral</legend>
+                <div class="estrelas">
+                    <input type="radio" id="estrela5" name="classificacao" value="5" required>
+                    <label for="estrela5" title="5 estrelas"><span aria-hidden="true">★</span><span class="sr-only">5 estrelas</span></label>
+
+                    <input type="radio" id="estrela4" name="classificacao" value="4" required>
+                    <label for="estrela4" title="4 estrelas"><span aria-hidden="true">★</span><span class="sr-only">4 estrelas</span></label>
+
+                    <input type="radio" id="estrela3" name="classificacao" value="3" required>
+                    <label for="estrela3" title="3 estrelas"><span aria-hidden="true">★</span><span class="sr-only">3 estrelas</span></label>
+
+                    <input type="radio" id="estrela2" name="classificacao" value="2" required>
+                    <label for="estrela2" title="2 estrelas"><span aria-hidden="true">★</span><span class="sr-only">2 estrelas</span></label>
+
+                    <input type="radio" id="estrela1" name="classificacao" value="1" required>
+                    <label for="estrela1" title="1 estrela"><span aria-hidden="true">★</span><span class="sr-only">1 estrela</span></label>
+                </div>
+            </fieldset>
+
+            <!-- Recursos úteis -->
+            <fieldset class="campo">
+                <legend>Recursos Úteis (marque todos que se aplicam)</legend>
+                <div class="opcao">
+                    <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
+                    <label for="durabilidade">Durabilidade</label>
+                </div>
+                <div class="opcao">
+                    <input type="checkbox" id="facilidade" name="recursos" value="facilidade-de-uso">
+                    <label for="facilidade">Facilidade de uso</label>
+                </div>
+                <div class="opcao">
+                    <input type="checkbox" id="desempenho" name="recursos" value="desempenho">
+                    <label for="desempenho">Desempenho</label>
+                </div>
+                <div class="opcao">
+                    <input type="checkbox" id="design" name="recursos" value="design">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
+
+            <!-- Avaliação escrita -->
+            <div class="campo">
+                <label for="avaliacaoEscrita">Avaliação Escrita (opcional)</label>
+                <textarea id="avaliacaoEscrita" name="avaliacaoEscrita" rows="5" placeholder="Conte o que você achou do produto..."></textarea>
+            </div>
+
+            <!-- Nome de usuário -->
+            <div class="campo">
+                <label for="nomeUsuario">Nome de Usuário (opcional)</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" autocomplete="nickname">
+            </div>
+
+            <input type="submit" value="Enviar Avaliação">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoAtual"></span> | Diego Celestino Souza Ramos | Guarulhos - SP</p>
+        <p>Última modificação: <span id="ultimaModificacao"></span></p>
+    </footer>
+</body>
+</html>
